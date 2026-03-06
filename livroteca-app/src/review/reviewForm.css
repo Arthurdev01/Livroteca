@@ -1,0 +1,191 @@
+.full-screen-background {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4c00ff 0%, #3a00cc 50%, #2a0099 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.full-screen-background::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.review-form-container {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 45px 40px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.review-form-container:hover {
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+}
+
+.review-form-container h2 {
+  text-align: center;
+  color: #4c00ff;
+  font-size: 28px;
+  margin-bottom: 35px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.review-form-container label {
+  color: #4c00ff;
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: block;
+  text-align: left;
+  width: 100%;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.review-form-container input[type="number"],
+.review-form-container textarea {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 25px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+  color: #333333;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.review-form-container input[type="number"]::placeholder,
+.review-form-container textarea::placeholder {
+  color: #aaa;
+}
+
+.review-form-container input[type="number"]:focus,
+.review-form-container textarea:focus {
+  border-color: #4c00ff;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(76, 0, 255, 0.1);
+}
+
+.review-form-container textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.review-form-container input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.review-form-container input[type="number"]::-webkit-outer-spin-button,
+.review-form-container input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.review-form-container button {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #4c00ff 0%, #6200ea 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(76, 0, 255, 0.3);
+}
+
+.review-form-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(76, 0, 255, 0.4);
+  background: linear-gradient(135deg, #5a00ff 0%, #7200fa 100%);
+}
+
+.review-form-container button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(76, 0, 255, 0.3);
+}
+
+.review-form-container .message {
+  font-weight: 600;
+  margin-top: 15px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.review-form-container .message.error {
+  color: #dc3545;
+  background-color: rgba(220, 53, 69, 0.1);
+  border: 1px solid rgba(220, 53, 69, 0.2);
+}
+
+.review-form-container .message.success {
+  color: #28a745;
+  background-color: rgba(40, 167, 69, 0.1);
+  border: 1px solid rgba(40, 167, 69, 0.2);
+}
+
+@media (max-width: 600px) {
+  .review-form-container {
+    padding: 30px 25px;
+    border-radius: 20px;
+  }
+
+  .review-form-container h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .review-form-container input[type="number"],
+  .review-form-container textarea {
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+
+  .review-form-container button {
+    padding: 14px;
+    font-size: 16px;
+  }
+}
+
