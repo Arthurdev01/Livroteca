@@ -1,6 +1,6 @@
 # Livroteca
 
-Uma aplicação web completa para gerenciamento de biblioteca pessoal, desenvolvida com React, Node.js e MongoDB.
+Uma aplicação web completa para gerenciamento de biblioteca pessoal, desenvolvida com React, Node.js e PostgreSQL.
 
 ## Sobre o Projeto
 
