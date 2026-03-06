@@ -1,6 +1,6 @@
 # Livroteca
 
-Uma aplicação web completa para gerenciamento de biblioteca pessoal, desenvolvida com React, Node.js e MongoDB.
+Uma aplicação web completa para gerenciamento de biblioteca pessoal, desenvolvida com React, Node.js e PostgreSQL.
 
 ## Sobre o Projeto
 
@@ -20,7 +20,7 @@ Livroteca é uma plataforma moderna e intuitiva para gerenciar sua coleção de 
 
 - **Frontend**: React.js, React Router
 - **Backend**: Node.js, Express
-- **Banco de Dados**: MongoDB, Mongoose
+- **Banco de Dados**:PostgreSQL
 - **Estilização**: CSS3 com design moderno e gradientes
 - **HTTP Client**: Axios
 
@@ -64,7 +64,7 @@ livroteca/
 
 - Node.js (versão 14 ou superior)
 - npm ou yarn
-- MongoDB (instância local ou MongoDB Atlas)
+- PostgreSQL
 
 ### Instalação
 
@@ -98,9 +98,9 @@ livroteca/
 
 ### Configuração do Banco de Dados
 
-O projeto utiliza MongoDB. Você pode:
-- Usar MongoDB local安装
-- Utilizar o MongoDB Atlas (nuvem)
+O projeto utiliza PostgreSQL. Você pode:
+- Usar Dbeaver local安装
+- Utilizar o PostgreSQL SupaBase
 - Ajustar a string de conexão em `livroteca_ws/config/db.js`
 
 ## Credenciais Padrão
@@ -180,4 +180,3 @@ Este projeto está sob a licença MIT.
 ---
 
 Desenvolvido com ❤️ para amantes de livros!
-
